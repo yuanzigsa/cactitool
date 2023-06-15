@@ -1,0 +1,2 @@
+# TrafficStatisticsPushToDingding
+cacti节点流量每日统计推送至钉钉
