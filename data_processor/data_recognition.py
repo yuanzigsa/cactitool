@@ -12,8 +12,6 @@ def read_image(image_path):
 def detect_text(image):
     # 使用图像处理库来检测文本区域
     # 这里使用了一些图像处理的技术，如边缘检测和轮廓检测
-    # 你可以根据具体情况选择适合的方法
-    # 这里只是一个示例，可能需要根据实际情况进行调整
     edges = cv2.Canny(image, 50, 150)
     contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
@@ -39,8 +37,6 @@ def extract_max_value(image, text_regions):
 
         # 使用文本处理库来提取Max:后的数据
         # 这里使用了正则表达式来匹配Max:后的数据
-        # 你可以根据具体情况选择适合的方法
-        # 这里只是一个示例，可能需要根据实际情况进行调整
         text = pytesseract.image_to_string(text_image)
         match = re.search(r'Max:\s*([\d.]+)', text)
         if match:

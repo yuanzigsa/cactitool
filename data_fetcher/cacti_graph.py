@@ -34,9 +34,18 @@ head = {
         "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36",
     }
 
-url1 = "http://212.64.77.78/cacti/graph_image.php?action=zoom&local_graph_id=17014&rra_id=0&view_type=tree&graph_start=1687140284&graph_end=1687226684&graph_height=120&graph_width=500&title_font_size=10"
-url2 = "http://212.64.77.78/cacti/graph_image.php?action=zoom&local_graph_id=9357&rra_id=0&view_type=tree&graph_start=1687141003&graph_end=1687227403&graph_height=120&graph_width=500&title_font_size=10"
-url3 = "http://212.64.77.78/cacti/graph_image.php?action=zoom&local_graph_id=9554&rra_id=0&view_type=tree&graph_start=1687141068&graph_end=1687227468&graph_height=120&graph_width=500&title_font_size=10"
+url1 = "http://120.77.151.18/cacti/graph_image.php?local_graph_id=12664&rra_id=0&graph_height=120&graph_width=500&title_font_size=10&view_type=tree&graph_start=1687166825&graph_end=1687253225"
+url2 = "http://120.77.151.18/cacti/graph_image.php?local_graph_id=5350&rra_id=0&graph_height=120&graph_width=500&title_font_size=10&view_type=tree&graph_start=1687166825&graph_end=1687253225"
+url3 = "http://120.77.151.18/cacti/graph_image.php?local_graph_id=5385&rra_id=0&graph_height=120&graph_width=500&title_font_size=10&view_type=tree&graph_start=1687166825&graph_end=1687253225"
+url4 = "http://120.77.151.18/cacti/graph_image.php?local_graph_id=5385&rra_id=0&graph_height=120&graph_width=500&title_font_size=10&view_type=tree&graph_start=1687166825&graph_end=1687253225"
+url5 = "http://120.77.151.18/cacti/graph_image.php?local_graph_id=5385&rra_id=0&graph_height=120&graph_width=500&title_font_size=10&view_type=tree&graph_start=1687166825&graph_end=1687253225"
+url6 = "http://120.77.151.18/cacti/graph_image.php?local_graph_id=5385&rra_id=0&graph_height=120&graph_width=500&title_font_size=10&view_type=tree&graph_start=1687166825&graph_end=1687253225"
+url7 = "http://120.77.151.18/cacti/graph_image.php?local_graph_id=5385&rra_id=0&graph_height=120&graph_width=500&title_font_size=10&view_type=tree&graph_start=1687166825&graph_end=1687253225"
+url8 = "http://120.77.151.18/cacti/graph_image.php?local_graph_id=5385&rra_id=0&graph_height=120&graph_width=500&title_font_size=10&view_type=tree&graph_start=1687166825&graph_end=1687253225"
+url9 = "http://120.77.151.18/cacti/graph_image.php?local_graph_id=5385&rra_id=0&graph_height=120&graph_width=500&title_font_size=10&view_type=tree&graph_start=1687166825&graph_end=1687253225"
+url10 = "http://120.77.151.18/cacti/graph_image.php?local_graph_id=5385&rra_id=0&graph_height=120&graph_width=500&title_font_size=10&view_type=tree&graph_start=1687166825&graph_end=1687253225"
+url11 = "http://120.77.151.18/cacti/graph_image.php?local_graph_id=5385&rra_id=0&graph_height=120&graph_width=500&title_font_size=10&view_type=tree&graph_start=1687166825&graph_end=1687253225"
+
 session = requests.session()
 login(ip=ip, head=head, name=name, passwd=passwd, session=session)
 
