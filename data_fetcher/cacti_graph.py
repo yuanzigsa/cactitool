@@ -28,8 +28,8 @@ def login(ip, head, name, passwd, session):
         print("NO")
 
 name = "admin"
-passwd = "ADMIN@2021222@cacti@!!@#"
-ip = "212.64.77.78"
+passwd = ""
+ip = ""
 head = {
         "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36",
     }
