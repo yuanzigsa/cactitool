@@ -183,9 +183,6 @@ for image_path, max_value in zip(image_paths, max_values):
         message_warning += "{}\n".format(image_info[image_name]['name'])
 
 # 发送钉钉消息
-# webhook = "https://oapi.dingtalk.com/robot/send?access_token=b7921f1a760c42966ecb18a4c11dfa89456dbc7bea164f75acd9b9f83d1e6b2f"  # 替换为您的钉钉机器人Webhook地址
-# send_dingtalk_message(webhook, message_today)
-# send_dingtalk_message(webhook, message_warning)
-
-print(message_today)
-print(message_warning)
+ webhook = ""  # 替换钉钉机器人Webhook地址
+ send_dingtalk_message(webhook, message_today)
+ send_dingtalk_message(webhook, message_warning)
