@@ -1,0 +1,81 @@
+{
+    "cacti_login_info": {
+        "ip": "123.123.123.123",
+        "username": "admin",
+        "password": "admin"
+    },
+    "dingtalk_api": {
+        "webhook": "",
+        "app_key": "",
+        "app_secret": "",
+        "workbook_id": "",
+        "operator_id": "",
+        "range_address": "",
+        "sheet_id": ""
+    },
+    "cacti_graph_info": {
+        "1": {
+            "name": "天水电信",
+            "bandwidth": "100G",
+            "threshold": "75G",
+            "graph_id": 12664,
+            "low_threshold_counts": 0
+        },
+        "2": {
+            "name": "惠州移动",
+            "bandwidth": "100G",
+            "threshold": "75G",
+            "graph_id": 5350,
+            "low_threshold_counts": 0
+        },
+        "3": {
+            "name": "武汉铁通",
+            "bandwidth": "40G",
+            "threshold": "30G",
+            "graph_id": 5385,
+            "low_threshold_counts": 0
+        },
+        "4": {
+            "name": "济宁移动",
+            "bandwidth": "20G",
+            "threshold": "15G",
+            "graph_id": 5306,
+            "low_threshold_counts": 0
+        },
+        "5": {
+            "name": "武汉移动",
+            "bandwidth": "120G",
+            "threshold": "60G",
+            "graph_id": 3228,
+            "low_threshold_counts": 0
+        },
+        "6": {
+            "name": "荆州联通",
+            "bandwidth": "100G",
+            "threshold": "75G",
+            "graph_id": 15207,
+            "low_threshold_counts": 0
+        },
+        "7": {
+            "name": "合肥电信",
+            "bandwidth": "130G",
+            "threshold": "97G",
+            "graph_id": 16091,
+            "low_threshold_counts": 0
+        },
+        "8": {
+            "name": "合肥移动",
+            "bandwidth": "100G",
+            "threshold": "75G",
+            "graph_id": 16093,
+            "low_threshold_counts": 0
+        },
+        "9": {
+            "name": "合肥联通",
+            "bandwidth": "100G",
+            "threshold": "75G",
+            "graph_id": 16092,
+            "low_threshold_counts": 0
+        }
+    }
+}
