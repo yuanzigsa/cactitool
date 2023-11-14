@@ -257,7 +257,8 @@ python3.9 --version
 
 1. 去https://github.com/tesseract-ocr/tessdata下载Tesssdata训练数据，如下载较慢可以网上搜索通过其他渠道下载
 
-   ![image-20230809153945624](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230809153945624.png)
+   ![image](https://github.com/yuanzigsa/CactiTrafficStatisticsPushToDingtalk/assets/30451380/91abd832-d440-4d50-96c3-a4d3d1d05180)
+
 
 2. 将下载的数据文件放置在正确的目录中。使用以下命令将数据文件从下载位置 (`DOWNLOAD_PATH`) 移动到 `/usr/local/share/tessdata/` 目录：
 
