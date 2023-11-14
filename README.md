@@ -8,7 +8,7 @@
 
 ​		该程序使用了程序+数据分离的方式，主程序为`cacti_data_push_to_dingtalk.py`，节点信息、cacti登录信息和钉钉api的数据配置存储在`config.json`中用于程序的调用。
 
-![image-20231103112456517](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20231103112456517.png)
+![image](https://github.com/yuanzigsa/CactiTrafficStatisticsPushToDingtalk/assets/30451380/44efaa6a-2c1c-4df1-b0f1-1360d3a3ea4c)
 
 ## 1.1 主程序（cacti_data_push_to_dingtalk）
 
@@ -400,11 +400,11 @@ HOME=/root
 
   - app_key和app_secret：钉钉开放平台后台，找到“应用信息”
 
-    ![image-20231114105725047](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20231114105725047.png)
+    ![image](https://github.com/yuanzigsa/CactiTrafficStatisticsPushToDingtalk/assets/30451380/bf7978f6-df7e-4a39-b044-e8740708d94d)
   
   - workbook_id：打开钉钉文档，点击左上角“表格”，然后点击“文档信息”
   
-    ![image-20231114110933214](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20231114110933214.png)
+    ![image](https://github.com/yuanzigsa/CactiTrafficStatisticsPushToDingtalk/assets/30451380/b728967b-ba6e-4d6b-bacd-e98f06daeb61)
   
   - operator_id：操作者id根据AppKey和AppSecret便可以获取到，示例代码如下：
   
@@ -476,7 +476,7 @@ HOME=/root
 
     - 在需要统计的图名称的位置右键”复制图片地址“
 
-      ![image-20231114113333057](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20231114113333057.png)
+      ![image](https://github.com/yuanzigsa/CactiTrafficStatisticsPushToDingtalk/assets/30451380/12d65fd3-7d82-4ec4-8583-569fdadacabf)
 
     - 如获取到的地址为：http://212.123.77.78/cacti/graph_image.php?local_graph_id=17014&rra_id=0&graph_height=120&graph_width=500&title_font_size=10&view_type=tree&graph_start=1690878720&graph_end=1690965120，可以看到其中graph_id=17014，将17014填入对应字典中的字段即可
 
@@ -487,25 +487,28 @@ HOME=/root
 
 1. 点开“群设置”，找到“机器人”选项
 
-![image-20230809155754563](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230809155754563.png)
+![image](https://github.com/yuanzigsa/CactiTrafficStatisticsPushToDingtalk/assets/30451380/7470cb30-6b46-4e47-b7c2-7d44950bfb22)
 
 2. 选择“添加机器人”
 
-![image-20230809160315849](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230809160315849.png)
+![image](https://github.com/yuanzigsa/CactiTrafficStatisticsPushToDingtalk/assets/30451380/ba1d8a9e-07a5-4373-8fb9-08c0fa3d6b1b)
 
 3. 选择“自定义”
 
-![image-20230809160419674](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230809160419674.png)
+![image](https://github.com/yuanzigsa/CactiTrafficStatisticsPushToDingtalk/assets/30451380/fce46efd-62e4-4a70-afaf-3798aec29e0c)
+
 
 4. 输入机器人名称，在安全设置处勾选“IP地址（段）”，输入部署程序的服务器IP，然后点击“完成”即可
 
-![image-20230809160737216](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230809160737216.png)
+![image](https://github.com/yuanzigsa/CactiTrafficStatisticsPushToDingtalk/assets/30451380/7405e3d1-601a-4465-bb95-8a8218a7a136)
+
 ## 4.2 修改程序源码
 1. 钉钉机器人创建完成后会给出webhook地址，复制这段地址
 
-   ![image-20230809161207583](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230809161207583.png)
+   ![image](https://github.com/yuanzigsa/CactiTrafficStatisticsPushToDingtalk/assets/30451380/1a588903-81ae-478b-85a6-7cee8e71cbdc)
 
    2. 将配置文件config.json中定义的webhook地址修改成新添加的这个机器人的webhook地址
 
-   ![image-20231114113713965](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20231114113713965.png)
+   ![image](https://github.com/yuanzigsa/CactiTrafficStatisticsPushToDingtalk/assets/30451380/c2dd705d-7b43-4b9f-a45c-b75482f1e1d9)
+
 
