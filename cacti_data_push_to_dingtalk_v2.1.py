@@ -33,7 +33,8 @@ app_secret = dingtalk_api['app_secret']
 workbook_id = dingtalk_api['workbook_id']
 operator_id = dingtalk_api['operator_id']
 range_address = dingtalk_api['range_address']
-webhook = dingtalk_api['webhook']
+webhook1 = dingtalk_api['webhook1']
+webhook2 = dingtalk_api['webhook2']
 
 # 登录
 def login(ip, head, name, passwd, session):
@@ -143,7 +144,7 @@ def get_access_token(app_key, app_secret):
         return data['access_token']
     else:
         return None
-    
+
 # 保存 sheet_id 到 JSON 文件
 def save_sheet_id(sheet_id):
     with open('config.json', 'r', encoding='utf-8') as file:
@@ -170,7 +171,7 @@ urls = [url_template.format(graph_id=cacti_graph_info[key]['graph_id'], start_ti
 # 创建下载目录
 current_directory = os.getcwd()  # 获取当前目录
 directory_path = os.path.join(current_directory, "graph")  # 要创建的目录路径
-if os.path.exists(directory_path):  # 检查目录是否存在
+if os.path.exists(directory_path):  # 检查目录是否存
     pass
 else:
     os.makedirs(directory_path)  # 使用os.makedirs()函数创建目录
@@ -220,7 +221,7 @@ if len(max_values) == len(image_paths):
 else:
     print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " 获取到的max_values的值的数量小于下载图片的数量，等待一分钟后重新下载图片并识别图中的数据")
     time.sleep(60)
-    # 重新下载图片并识别图中的数据
+    # 重下载图片并识别图中的数据
     while len(max_values) != len(image_paths):
         for i, url in enumerate(urls):
             # 根据循环次数给图片命名
@@ -262,9 +263,9 @@ if today.day == 2:
     for key in config["cacti_graph_info"]:
         config["cacti_graph_info"][key]["low_threshold_counts"] = 0
     with open('config.json', 'w', encoding='utf-8') as file:
-        json.dump(config, file, ensure_ascii=False, indent=4)    
+        json.dump(config, file, ensure_ascii=False, indent=4)
 
-# 获取前一天月份和日期并格式化
+# 获取前一天月和日期并格式化
 locale.setlocale(locale.LC_ALL, 'zh_CN.UTF-8')
 today = datetime.date.today()
 yesterday = today - datetime.timedelta(days=1)
@@ -284,14 +285,15 @@ for index, (image_path, max_value, threshold_value) in enumerate(zip(image_paths
         node_name = graph_info['name']
         config["cacti_graph_info"][f'{index}']["low_threshold_counts"] += 1
         with open('config.json', 'w', encoding='utf-8') as file:
-            json.dump(config, file, ensure_ascii=False, indent=4)  
+            json.dump(config, file, ensure_ascii=False, indent=4)
         count = cacti_graph_info[f'{index}']["low_threshold_counts"]
         message_warning += "- {} | {}天\n".format(node_name, count)
 message_combined = message_today + "\n" + message_warning
 print(message_combined)
 
 # 发送钉钉消息
-send_dingtalk_message(webhook, message_combined)
+send_dingtalk_message(webhook1, message_combined)
+send_dingtalk_message(webhook2, message_combined)
 
 # 删除所有图形文件
 for filename in os.listdir(image_dir):
@@ -305,7 +307,7 @@ access_token = get_access_token(app_key, app_secret)
 # 尝试加载 sheet_id
 sheet_id = dingtalk_api['sheet_id']
 
-# 获取当前日期并判断今天是否是1月、4月、7月或者10月的2号
+# 获当前日期并判断今天是否是1月、4月、7月或者10月的2号
 current_date = datetime.datetime.now().date()
 if current_date.day == 2 and current_date.month in [1, 4, 7, 10]:
     if current_date.month in [1, 2, 3]:
@@ -348,7 +350,7 @@ data = json.loads(response.text)
 if response.status_code == 200:
     print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " 已成功获取到钉钉在线文档的表格信息，正在进行数据处理和推送......")
 else:
-    print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " 获取钉钉在线文档信息出错，请检查sheet_id.json文件是否存在并且已经包含了合法的表格id")
+    print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " 获取钉钉在线文档信息出错，请检查sheet_id.json文件是否存在并且已经包含了合法的格id")
 
 # 确定编辑的起始位置
 data = json.loads(response.text)
@@ -363,7 +365,7 @@ start_address = find_first_empty_row(data["values"])
 
 # 格式化请求数据并进行推送
 data = {
-    "values": [[f"{formatted_date}", "", "", ""], 
+    "values": [[f"{formatted_date}", "", "", ""],
                ["节点", "接入带宽/报警值", "18-24点流量最大值", "是否低于报警值"]],
     "backgroundColors": [["white", "white", "white", "white"],
                         ["00B14D", "00B14D", "00B14D", "00B14D"]]
